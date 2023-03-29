@@ -1,3 +1,5 @@
+import "./index.css"
+
 const table = document.getElementById("table")
 function render(state)
 {

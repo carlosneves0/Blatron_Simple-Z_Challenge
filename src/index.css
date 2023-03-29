@@ -1,7 +1,41 @@
+html {
+  width: 100vw;
+  height: 100vh;
+}
+
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
-    Arial, sans-serif;
-  margin: auto;
-  max-width: 38rem;
-  padding: 2rem;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+
+#table {
+   width: 100%;
+   height: 100%;
+   overflow: auto;
+   display: grid;
+}
+
+.table-row {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border: solid 1px #000;
+  border-top: none;
+}
+
+.table-row:first-child {
+  border-top: solid 1px #000;
 }
