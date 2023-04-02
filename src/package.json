@@ -1,0 +1,16 @@
+{
+  "name": "src",
+  "productName": "src",
+  "description": "My Electron application description",
+  "keywords": [],
+  "main": "./main.js",
+  "version": "1.0.0",
+  "author": "Manuella",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "23.2.0"
+  }
+}
