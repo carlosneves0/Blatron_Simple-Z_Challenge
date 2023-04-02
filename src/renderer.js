@@ -1,4 +1,7 @@
 import "./index.css"
+var varx=0;
+var vary=0;
+const dps = [];
 
 const table = document.getElementById("table")
 function render(state)
@@ -24,7 +27,6 @@ function createTableRow({ x, y })
   const yCell = document.createElement("div")
   yCell.textContent = y
   tableRow.appendChild(yCell)
-  
   return tableRow
 }
 
@@ -34,17 +36,31 @@ function random(min, max)
   return Math.random() * (max - min) + min
 }
 
-// Simulate a data source
+      // Simulate a data source
 ((async () =>
-{
-  const INTERVAL = 555, MIN = 0, MAX = 50
-
-  let state = [["x", "y"]]
-  
-  for (let x = 0; x < MAX; x++)
   {
-    state = [...state, [x, random(MIN, MAX)]]
-    render(state)
-    await new Promise(resolve => setTimeout(resolve, INTERVAL))
+    const INTERVAL = 555, MIN = 0, MAX = 50
+
+      let state = [["x", "y"]]
+          
+      for (let x = 0; x < MAX; x++)
+      {  
+        state = [...state, [varx= x, vary= random(MIN, MAX)]]
+        render(state)
+        dps.push({x:varx,y:vary}); 
+        await new Promise(resolve => setTimeout(resolve, INTERVAL))
   }
 })())
+
+window.onload = function () {
+var chart = new CanvasJS.Chart("chartContainer", {
+	title :{
+		text: "GRÁFICO"
+	},
+	data: [{
+		type: "line",
+		dataPoints:dps
+	}]
+});
+	chart.render();
+}

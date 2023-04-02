@@ -12,10 +12,7 @@
     "lint": "echo \"No linting configured\""
   },
   "keywords": [],
-  "author": {
-    "name": "Carlos Neves",
-    "email": "9116538+carlosneves0@users.noreply.github.com"
-  },
+  "author": "Carlos Neves <9116538+carlosneves0@users.noreply.github.com>",
   "license": "MIT",
   "devDependencies": {
     "@electron-forge/cli": "^6.1.0",
@@ -26,11 +23,12 @@
     "@electron-forge/plugin-webpack": "^6.1.0",
     "@vercel/webpack-asset-relocator-loader": "1.7.3",
     "css-loader": "^6.0.0",
-    "electron": "23.2.0",
+    "electron": "^23.2.1",
     "node-loader": "^2.0.0",
     "style-loader": "^3.0.0"
   },
   "dependencies": {
+    "chart.js": "^4.2.1",
     "electron-squirrel-startup": "^1.0.0"
   }
 }

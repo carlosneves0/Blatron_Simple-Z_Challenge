@@ -14,6 +14,7 @@ body {
   height: 100vh;
   display: grid;
   grid-template-columns: repeat(2,1fr);
+  background-color: #accfeb;
 }
 
 #table {
@@ -21,12 +22,27 @@ body {
    height: 100%;
    overflow: auto;
    display: grid;
+   justify-content: space-around;
+   padding-top: 5%;
+   background-color: #accfeb;
+}
+
+#graph {
+   width: 100%;
+   height: 100%;
+   overflow: auto;
+   display: grid;
+   align-content: center;
+   background-color: #accfeb;
+   padding-top: 5%;
+   padding-left: 2%;
+   padding-right: 2%;
 }
 
 .table-row {
   width: 100%;
   height: 100%;
-  overflow: auto;
+  overflow: visible;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
@@ -34,8 +50,12 @@ body {
   box-sizing: border-box;
   border: solid 1px #000;
   border-top: none;
+  background-color: white;
+  justify-items: center;
 }
 
 .table-row:first-child {
-  border-top: solid 1px #000;
+    border-top: solid 1px #000;
+    font-weight: bolder;
+    font-size: xxx-large;
 }
